@@ -41,7 +41,7 @@
         // バンプマップ読み込み
         var bump = textureLoader.load("take.jpg");
         mat.bumpMap = bump;
-        mat.bumpscale = 0.1;
+        mat.bumpscale = 0.15;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -58,16 +58,16 @@
         
         var geometry1 = new THREE.BoxGeometry(400, 40, 100);
         var isu1 = new THREE.Mesh(geometry1, mat);
-        isu1.position.set( 0, -0.2, 0);
+        isu1.position.set( 0, -100, 0);
         scene.add(isu1);
         
         var geometry2 = new THREE.BoxGeometry(30, 80, 100);
         var isu2 = new THREE.Mesh(geometry2, mat);
-        isu2.position.set( 0.2, -0.3, 0);
+        isu2.position.set( 200, -300, 0);
         scene.add(isu2);
         
         var isu3 = new THREE.Mesh(geometry2, mat);
-        isu3.position.set( -0.2, -0.3, 0);
+        isu3.position.set( -200, -300, 0);
         scene.add(isu3);
         tick();
 
