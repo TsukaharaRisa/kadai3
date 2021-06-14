@@ -33,15 +33,26 @@
         const controls = new THREE.OrbitControls(camera,document.body);
         
         // テクスチャー読み込み
-        var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("take.jpg");
-        var mat = new THREE.MeshPhongMaterial();
-        mat.map = texture;
+        var textureLoader1 = new THREE.TextureLoader();  
+        var texture1 = textureLoader1.load("take1.jpg");
+        var mat1 = new THREE.MeshPhongMaterial();
+        mat1.map = texture1;
   
         // バンプマップ読み込み
-        var bump = textureLoader.load("take.jpg");
-        mat.bumpMap = bump;
-        mat.bumpscale = 0.15;
+        var bump1 = textureLoader1.load("take1.jpg");
+        mat1.bumpMap = bump1;
+        mat1.bumpscale = 0.15;
+        
+        // テクスチャー読み込み
+        var textureLoader2 = new THREE.TextureLoader();  
+        var texture2 = textureLoader2.load("take2.jpg");
+        var mat2 = new THREE.MeshPhongMaterial();
+        mat2.map = texture2;
+  
+        // バンプマップ読み込み
+        var bump2 = textureLoader2.load("take2.jpg");
+        mat2.bumpMap = bump2;
+        mat2.bumpscale = 0.15;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -57,16 +68,16 @@
         
         
         var geometry1 = new THREE.BoxGeometry(400, 40, 100);
-        var isu1 = new THREE.Mesh(geometry1, mat);
+        var isu1 = new THREE.Mesh(geometry1, mat1);
         isu1.position.set( 0, -100, 0);
         scene.add(isu1);
         
         var geometry2 = new THREE.BoxGeometry(30, 80, 100);
-        var isu2 = new THREE.Mesh(geometry2, mat);
+        var isu2 = new THREE.Mesh(geometry2, mat2);
         isu2.position.set( 150, -150, 0);
         scene.add(isu2);
         
-        var isu3 = new THREE.Mesh(geometry2, mat);
+        var isu3 = new THREE.Mesh(geometry2, mat2);
         isu3.position.set( -150, -150, 0);
         scene.add(isu3);
         tick();
