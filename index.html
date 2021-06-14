@@ -80,6 +80,19 @@
         var isu3 = new THREE.Mesh(geometry2, mat2);
         isu3.position.set( -150, -150, 0);
         scene.add(isu3);
+        
+        // 木0をスプライトで作成
+        var textureLoader3 = new THREE.TextureLoader();  
+        var texture3 = textureLoader3.load("tree1.png");
+        const material1 = new THREE.SpriteMaterial({ map: texture3,});
+
+        const sprite1 = new THREE.Sprite(material1);
+        sprite1.position.x = -100;
+        sprite1.position.y = 0;
+        sprite1.position.z = 250;
+        sprite1.scale.set(100,100,100);
+        scene.add(sprite1);
+        
         tick();
 
         // 毎フレーム時に実行されるループイベントです
