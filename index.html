@@ -18,6 +18,9 @@
         });
         renderer.setSize(width, height);
         
+        // 背景の色を設定
+        renderer.setClearColor(0xeeeeff);
+        
         // シーンを作成
         const scene = new THREE.Scene();
 
@@ -51,8 +54,8 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // 地球を作成(原点に作成)
-        var geometry = new THREE.BoxGeometry(0.5, 0.25 , 0.1);
+        
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
         var isu = new THREE.Mesh(geometry, mat);
         scene.add(isu);
 
