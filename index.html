@@ -40,11 +40,16 @@
         // シーンに追加
         scene.add(directionalLight2);
 
-        // 箱を作成(原点に作成)
-        var geometry = new THREE.BoxGeometry(300, 300, 300);
-        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-        var box = new THREE.Mesh(geometry, material);
-        scene.add(box);
+        // テクスチャー読み込み
+        var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("img/earth.png");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
+
+        // 地球を作成(原点に作成)
+        var geometry = new THREE.SphereGeometry(300, 30, 30);
+        var earth = new THREE.Mesh(geometry, mat);
+        scene.add(earth);
 
         tick();
 
