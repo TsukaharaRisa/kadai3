@@ -57,6 +57,7 @@
         
         var geometry = new THREE.BoxGeometry(400, 40, 100);
         var isu = new THREE.Mesh(geometry, mat);
+        isu.position.set( 0.8, 0.5, 0);
         scene.add(isu);
 
         tick();
