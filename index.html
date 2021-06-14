@@ -34,12 +34,12 @@
         
         // テクスチャー読み込み
         var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("竹L09.jpg");
+        var texture = textureLoader.load("take.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
   
         // バンプマップ読み込み
-        var bump = textureLoader.load("竹L09.jpg");
+        var bump = textureLoader.load("take.jpg");
         mat.bumpMap = bump;
         mat.bumpscale = 0.1;
   
@@ -55,7 +55,7 @@
         scene.add(directionalLight2);
 
         
-        var geometry = new THREE.BoxGeometry(300, 50, 100);
+        var geometry = new THREE.BoxGeometry(400, 40, 100);
         var isu = new THREE.Mesh(geometry, mat);
         scene.add(isu);
 
