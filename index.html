@@ -69,16 +69,16 @@
         
         var geometry1 = new THREE.BoxGeometry(400, 40, 100);
         var isu1 = new THREE.Mesh(geometry1, mat1);
-        isu1.position.set( 0, -100, -50);
+        isu1.position.set( 0, -150, 0);
         scene.add(isu1);
         
         var geometry2 = new THREE.BoxGeometry(30, 80, 100);
         var isu2 = new THREE.Mesh(geometry2, mat2);
-        isu2.position.set( 150, -150, -50);
+        isu2.position.set( 150, -200, 0);
         scene.add(isu2);
         
         var isu3 = new THREE.Mesh(geometry2, mat2);
-        isu3.position.set( -150, -150, -50);
+        isu3.position.set( -150, -200, 0);
         scene.add(isu3);
         
         // 木0をスプライトで作成
@@ -87,9 +87,9 @@
         const material1 = new THREE.SpriteMaterial({ map: texture3,});
 
         const sprite1 = new THREE.Sprite(material1);
-        sprite1.position.x = -150;
+        sprite1.position.x = -180;
         sprite1.position.y = 50;
-        sprite1.position.z = -250;
+        sprite1.position.z = -150;
         sprite1.scale.set(800,800,800);
         scene.add(sprite1);
         
