@@ -45,12 +45,12 @@
         
         // テクスチャー読み込み
         var textureLoader2 = new THREE.TextureLoader();  
-        var texture2 = textureLoader2.load("mokume.jpg");
+        var texture2 = textureLoader2.load("mokume1.jpg");
         var mat2 = new THREE.MeshPhongMaterial();
         mat2.map = texture2;
   
         // バンプマップ読み込み
-        var bump2 = textureLoader2.load("mokume.jpg");
+        var bump2 = textureLoader2.load("mokume1.jpg");
         mat2.bumpMap = bump2;
         mat2.bumpscale = 0.15;
         
@@ -87,7 +87,7 @@
         mat5.bumpMap = bump5;
         mat5.bumpscale = 0.3;
         
-         // テクスチャー読み込み
+        // テクスチャー読み込み
         var textureLoader6 = new THREE.TextureLoader();  
         var texture6 = textureLoader5.load("syouzi.jpg");
         var mat6 = new THREE.MeshPhongMaterial();
@@ -97,6 +97,17 @@
         var bump6 = textureLoader6.load("syouzi.jpg");
         mat6.bumpMap = bump6;
         mat6.bumpscale = 0.2;
+        
+        // テクスチャー読み込み
+        var textureLoader8 = new THREE.TextureLoader();  
+        var texture8 = textureLoader8.load("mokume2.jpg");
+        var mat8 = new THREE.MeshPhongMaterial();
+        mat8.map = texture8;
+  
+        // バンプマップ読み込み
+        var bump8 = textureLoader8.load("mokume2.jpg");
+        mat8.bumpMap = bump8;
+        mat8.bumpscale = 0.2;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -181,6 +192,12 @@
         var hata3 = new THREE.Mesh(geometry7, mat1);
         hata3.position.set( 260, 180, -250);
         scene.add(hata3);
+        
+        //柱を作成
+        var geometry8 = new THREE.CylinderGeometry( 5, 5, 600, 32 );
+        var hasira1 = new THREE.Mesh(geometry8, mat8);
+        hasira1.position.set( 450, 50, -250);
+        scene.add(hasira1);
         
         
         // 木0をスプライトで作成
