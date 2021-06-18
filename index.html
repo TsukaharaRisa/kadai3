@@ -113,19 +113,24 @@
         
         // 屋根を作成
         var geometry3 = new THREE.BoxGeometry(1200, 200, 10);
-        var yane = new THREE.Mesh(geometry3, mat3);
-        yane.rotation.x = -Math.PI/3.5;
-        yane.position.set( 0, 285, -220);
-        scene.add(yane);
+        var yane1 = new THREE.Mesh(geometry3, mat3);
+        yane1.rotation.x = -Math.PI/3.5;
+        yane1.position.set( 300, 285, -220);
+        scene.add(yane1);
+        
+        var yane2 = new THREE.Mesh(geometry3, mat3);
+        yane2.rotation.x = -Math.PI/3.5;
+        yane2.position.set( -300, 285, -220);
+        scene.add(yane2);
         
         //壁を作成
         var geometry4 = new THREE.BoxGeometry(600, 600, 10);
         var kabe1 = new THREE.Mesh(geometry4, mat4);
-        kabe1.position.set( 250, 50, -300);
+        kabe1.position.set( 300, 50, -300);
         scene.add(kabe1);
         
         var kabe2 = new THREE.Mesh(geometry4, mat4);
-        kabe2.position.set( -250, 50, -300);
+        kabe2.position.set( -300, 50, -300);
         scene.add(kabe2);
 
    
