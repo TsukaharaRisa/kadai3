@@ -67,19 +67,27 @@
 
         
         
-        var geometry1 = new THREE.BoxGeometry(400, 40, 100);
+        var geometry1 = new THREE.BoxGeometry(400, 100, 100);
         var isu1 = new THREE.Mesh(geometry1, mat1);
         isu1.position.set( 0, -150, 0);
         scene.add(isu1);
         
         var geometry2 = new THREE.BoxGeometry(20, 60, 100);
         var isu2 = new THREE.Mesh(geometry2, mat2);
-        isu2.position.set( 150, -200, 0);
+        isu2.position.set( 150, -200, 50);
         scene.add(isu2);
         
         var isu3 = new THREE.Mesh(geometry2, mat2);
-        isu3.position.set( -150, -200, 0);
+        isu3.position.set( -150, -200, 50);
         scene.add(isu3);
+       
+        var isu4 = new THREE.Mesh(geometry2, mat2);
+        isu4.position.set( 150, -200, -50);
+        scene.add(isu4);
+        
+        var isu4 = new THREE.Mesh(geometry2, mat2);
+        isu4.position.set( -150, -200, -50);
+        scene.add(isu4);
         
         // 木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
@@ -93,16 +101,24 @@
         sprite1.scale.set(700,700,700);
         scene.add(sprite1);
         
+         // 屋根をスプライトで作成
         var textureLoader4 = new THREE.TextureLoader();  
-        var texture4 = textureLoader4.load("bangasa.png");
+        var texture4= textureLoader4.load("tree_01.png");
         const material2 = new THREE.SpriteMaterial({ map: texture4,});
 
         const sprite2 = new THREE.Sprite(material2);
-        sprite2.position.x = 400;
-        sprite2.position.y = 0;
-        sprite2.position.z = 0;
-        sprite2.scale.set(300,300,300);
+        sprite2.position.x = -180;
+        sprite2.position.y = 100;
+        sprite2.position.z = -150;
+        sprite2.scale.set(700,700,700);
         scene.add(sprite2);
+        
+var plane =  new THREE.Mesh(                                      
+             new THREE.PlaneGeometry(100, 100, 1, 1),
+              new THREE.MeshLambertMaterial({ 
+                color: 0x0000ff             
+                }));             
+        scene.add(plane);    
         
         tick();
 
