@@ -76,6 +76,17 @@
         mat4.bumpMap = bump4;
         mat4.bumpscale = 0.2;
   
+        // テクスチャー読み込み
+        var textureLoader5 = new THREE.TextureLoader();  
+        var texture5 = textureLoader5.load("isi.jpg");
+        var mat5 = new THREE.MeshPhongMaterial();
+        mat5.map = texture5;
+  
+        // バンプマップ読み込み
+        var bump5 = textureLoader5.load("isi.jpg");
+        mat5.bumpMap = bump5;
+        mat5.bumpscale = 0.3;
+  
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
         directionalLight1.position.set(100, 100, 100);
@@ -88,7 +99,7 @@
         scene.add(directionalLight2);
 
         
-        
+        //椅子を作成
         var geometry1 = new THREE.BoxGeometry(400, 100, 200);
         var isu1 = new THREE.Mesh(geometry1, mat1);
         isu1.position.set( -300, -150, -100);
@@ -132,8 +143,14 @@
         var kabe2 = new THREE.Mesh(geometry4, mat4);
         kabe2.position.set( -300, 50, -300);
         scene.add(kabe2);
-
-   
+        
+        //道を作成
+        var geometry5 = new THREE.BoxGeometry(600, 400);
+        var miti = new THREE.Mesh(geometry5, mat5);
+        miti.rotation.x = -Math.PI/1.1;
+        miti.position.set( 0, -250, -120);
+        scene.add(miti);
+        
         
         // 木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
