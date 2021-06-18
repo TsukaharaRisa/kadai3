@@ -86,6 +86,17 @@
         var bump5 = textureLoader5.load("isi.jpg");
         mat5.bumpMap = bump5;
         mat5.bumpscale = 0.3;
+        
+         // テクスチャー読み込み
+        var textureLoader6 = new THREE.TextureLoader();  
+        var texture6 = textureLoader5.load("syouzi.jpg");
+        var mat6 = new THREE.MeshPhongMaterial();
+        mat6.map = texture6;
+  
+        // バンプマップ読み込み
+        var bump6 = textureLoader6.load("syouzi.jpg");
+        mat6.bumpMap = bump6;
+        mat6.bumpscale = 0.2;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -150,6 +161,12 @@
         miti.rotation.x = -Math.PI/2;
         miti.position.set( 0, -250, -30);
         scene.add(miti);
+        
+        //ドアを作成
+        var geometry6 = new THREE.PlaneGeometry(300, 400);
+        var doa = new THREE.Mesh(geometry6, mat6);
+        doa.position.set( 450, 40, -299);
+        scene.add(doa);
         
         
         // 木0をスプライトで作成
