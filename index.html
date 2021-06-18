@@ -112,14 +112,14 @@
         scene.add(isu4);
         
         // 屋根を作成
-        var geometry3 = new THREE.PlaneGeometry(600, 200);
+        var geometry3 = new THREE.BoxGeometry(600, 200, 10);
         var yane = new THREE.Mesh(geometry3, mat3);
         yane.rotation.x = -Math.PI/3.5;
-        yane.position.set( 0, 250, -100);
+        yane.position.set( 0, 250, -120);
         scene.add(yane);
         
         //壁を作成
-        var geometry4 = new THREE.BoxGeometry(600, 500, 10);
+        var geometry4 = new THREE.BoxGeometry(600, 530, 10);
         var kabe = new THREE.Mesh(geometry4, mat4);
         kabe.position.set( 0, 50, -200);
         scene.add(kabe);
