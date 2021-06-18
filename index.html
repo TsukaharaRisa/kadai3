@@ -100,7 +100,10 @@
         isu4.position.set( -150, -200, -50);
         scene.add(isu4);
         
-         // 屋根を作成
+        // 屋根を作成
+        var geometry4 = new THREE.PlaneGeometry(400, 100);
+        var yane = new THREE.Mesh(geometry4, mat3);
+        scene.add(yane);
 
    
         
@@ -115,18 +118,6 @@
         sprite1.position.z = -150;
         sprite1.scale.set(700,700,700);
         scene.add(sprite1);
-        
-        
-        var textureLoader4 = new THREE.TextureLoader();  
-        var texture4 = textureLoader4.load("yane.png");
-        const material2 = new THREE.SpriteMaterial({ map: texture4,});
-
-        const sprite2 = new THREE.Sprite(material2);
-        sprite2.position.x = 0;
-        sprite2.position.y = 0;
-        sprite2.position.z = 0;
-        sprite2.scale.set(700,700,700);
-        scene.add(sprite2);
    
         
         tick();
