@@ -101,11 +101,19 @@
         scene.add(isu4);
         
          // 屋根を作成
-        var geometry3 = new THREE.PlaneGeometry(100,100,100);
+        var geometry3 = new THREE.PlaneGeometry(100,100,1, 1);
         var yane1 =  new THREE.Mesh(geometry3, mat3);
         yane1.position(0, 0, 0);
-        yane1.rotation.x = -Math.PI/40;
+        yane1.rotation.x = -Math.PI/8;
         scene.add(yane1);
+        
+        
+        var plane =  new THREE.Mesh(                                      
+             new THREE.PlaneGeometry(100, 100, 1, 1),
+              new THREE.MeshLambertMaterial({ 
+                color: 0x0000ff             
+                }));       
+        scene.add(plane);    
         
         // 木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
