@@ -63,7 +63,7 @@
         // バンプマップ読み込み
         var bump3 = textureLoader3.load("yane.jpg");
         mat3.bumpMap = bump3;
-        mat3.bumpscale = 0.3;
+        mat3.bumpscale = 0.5;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -103,7 +103,7 @@
         // 屋根を作成
         var geometry4 = new THREE.PlaneGeometry(600, 200);
         var yane = new THREE.Mesh(geometry4, mat3);
-        yane.rotation.x = -Math.PI/13;
+        yane.rotation.x = -Math.PI/1;
         yane.position.set( 0, 250, 0);
         scene.add(yane);
 
