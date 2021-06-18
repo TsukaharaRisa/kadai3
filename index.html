@@ -101,8 +101,9 @@
         scene.add(isu4);
         
         // 屋根を作成
-        var geometry4 = new THREE.PlaneGeometry(400, 100);
+        var geometry4 = new THREE.PlaneGeometry(600, 400);
         var yane = new THREE.Mesh(geometry4, mat3);
+        torus.rotation.x = Math.PI/1; 
         scene.add(yane);
 
    
