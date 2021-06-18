@@ -34,12 +34,12 @@
         
         // テクスチャー読み込み
         var textureLoader1 = new THREE.TextureLoader();  
-        var texture1 = textureLoader1.load("nuno.jpg");
+        var texture1 = textureLoader1.load("nuno1.jpg");
         var mat1 = new THREE.MeshPhongMaterial();
         mat1.map = texture1;
   
         // バンプマップ読み込み
-        var bump1 = textureLoader1.load("nuno.jpg");
+        var bump1 = textureLoader1.load("nuno1.jpg");
         mat1.bumpMap = bump1;
         mat1.bumpscale = 0.15;
         
@@ -97,6 +97,18 @@
         var bump6 = textureLoader6.load("syouzi.jpg");
         mat6.bumpMap = bump6;
         mat6.bumpscale = 0.2;
+        
+        // テクスチャー読み込み
+        var textureLoader7 = new THREE.TextureLoader();  
+        var texture7 = textureLoader7.load("nuno2.jpg");
+        var mat7 = new THREE.MeshPhongMaterial();
+        mat7.map = texture7;
+  
+        // バンプマップ読み込み
+        var bump7 = textureLoader7.load("nuno2.jpg");
+        mat7.bumpMap = bump7;
+        mat7.bumpscale = 0.2;
+  
         
         // テクスチャー読み込み
         var textureLoader8 = new THREE.TextureLoader();  
