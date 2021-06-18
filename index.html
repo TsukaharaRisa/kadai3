@@ -54,7 +54,7 @@
         mat2.bumpMap = bump2;
         mat2.bumpscale = 0.15;
         
-         // テクスチャー読み込み
+        // テクスチャー読み込み
         var textureLoader3 = new THREE.TextureLoader();  
         var texture3 = textureLoader3.load("yane.jpg");
         var mat3 = new THREE.MeshPhongMaterial();
@@ -64,6 +64,17 @@
         var bump3 = textureLoader3.load("yane.jpg");
         mat3.bumpMap = bump3;
         mat3.bumpscale = 0.5;
+        
+        // テクスチャー読み込み
+        var textureLoader4 = new THREE.TextureLoader();  
+        var texture4 = textureLoader4.load("kabe.jpg");
+        var mat4 = new THREE.MeshPhongMaterial();
+        mat4.map = texture4;
+  
+        // バンプマップ読み込み
+        var bump4 = textureLoader4.load("kabe.jpg");
+        mat4.bumpMap = bump4;
+        mat4.bumpscale = 0.2;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -101,11 +112,17 @@
         scene.add(isu4);
         
         // 屋根を作成
-        var geometry4 = new THREE.PlaneGeometry(600, 200);
-        var yane = new THREE.Mesh(geometry4, mat3);
+        var geometry3 = new THREE.PlaneGeometry(600, 200);
+        var yane = new THREE.Mesh(geometry3, mat3);
         yane.rotation.x = -Math.PI/3;
         yane.position.set( 0, 250, -50);
         scene.add(yane);
+        
+        //壁を作成
+        var geometry4 = new THREE.BoxGeometry(600, 700, 10);
+        var kabe = new THREE.Mesh(geometry4, mat4);
+        kabe.position.set( 0, 0, -100);
+        scene.add(kabe);
 
    
         
