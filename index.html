@@ -83,7 +83,7 @@
         isu1.position.set( 0, -150, 0);
         scene.add(isu1);
         
-        var geometry2 = new THREE.BoxGeometry(20, 60, 10);
+        var geometry2 = new THREE.BoxGeometry(20, 60, 20);
         var isu2 = new THREE.Mesh(geometry2, mat2);
         isu2.position.set( 150, -200, 50);
         scene.add(isu2);
@@ -103,13 +103,10 @@
          // 屋根を作成
 
         
-        
-        var plane =  new THREE.Mesh(                                      
-             new THREE.PlaneGeometry(100, 100, 1, 1),
-              new THREE.MeshLambertMaterial({ 
-                color: 0x0000ff             
-                }));       
-        scene.add(plane);    
+        var geometry3 = new THREE.PlaneGeometry(100, 100, 1, 1),
+        var yane =  new THREE.Mesh(geometry3, mat3); 
+        yane.position.set( 0, 0, 0);
+        scene.add(yane);    
         
         // 木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
