@@ -91,38 +91,42 @@
         
         var geometry1 = new THREE.BoxGeometry(400, 100, 200);
         var isu1 = new THREE.Mesh(geometry1, mat1);
-        isu1.position.set( -300, -150, 0);
+        isu1.position.set( -300, -150, -50);
         scene.add(isu1);
         
         var geometry2 = new THREE.BoxGeometry(20, 60, 20);
         var isu2 = new THREE.Mesh(geometry2, mat2);
-        isu2.position.set( -150, -200, 50);
+        isu2.position.set( -150, -200, 0);
         scene.add(isu2);
         
         var isu3 = new THREE.Mesh(geometry2, mat2);
-        isu3.position.set( -450, -200, 50);
+        isu3.position.set( -450, -200, 0);
         scene.add(isu3);
        
         var isu4 = new THREE.Mesh(geometry2, mat2);
-        isu4.position.set( -150, -200, -50);
+        isu4.position.set( -150, -200, -100);
         scene.add(isu4);
         
         var isu4 = new THREE.Mesh(geometry2, mat2);
-        isu4.position.set( -450, -200, -50);
+        isu4.position.set( -450, -200, -100);
         scene.add(isu4);
         
         // 屋根を作成
         var geometry3 = new THREE.BoxGeometry(1200, 200, 10);
         var yane = new THREE.Mesh(geometry3, mat3);
         yane.rotation.x = -Math.PI/3.5;
-        yane.position.set( 0, 250, -120);
+        yane.position.set( 0, 250, -170);
         scene.add(yane);
         
         //壁を作成
-        var geometry4 = new THREE.BoxGeometry(1200, 530, 10);
-        var kabe = new THREE.Mesh(geometry4, mat4);
-        kabe.position.set( 0, 50, -200);
-        scene.add(kabe);
+        var geometry4 = new THREE.BoxGeometry(600, 530, 10);
+        var kabe1 = new THREE.Mesh(geometry4, mat4);
+        kabe1.position.set( 50, 50, -250);
+        scene.add(kabe1);
+        
+        var kabe2 = new THREE.Mesh(geometry4, mat4);
+        kabe2.position.set( -50, 50, -250);
+        scene.add(kabe2);
 
    
         
@@ -134,7 +138,7 @@
         const sprite1 = new THREE.Sprite(material1);
         sprite1.position.x = -550;
         sprite1.position.y = 100;
-        sprite1.position.z = 50;
+        sprite1.position.z = ;
         sprite1.scale.set(700,700,700);
         scene.add(sprite1);
    
