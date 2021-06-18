@@ -103,7 +103,7 @@
         
          // 屋根をスプライトで作成
         var textureLoader4 = new THREE.TextureLoader();  
-        var texture4= textureLoader4.load("tree_01.png");
+        var texture4= textureLoader4.load("yane.jpg");
         const material2 = new THREE.SpriteMaterial({ map: texture4,});
 
         const sprite2 = new THREE.Sprite(material2);
@@ -111,16 +111,10 @@
         sprite2.position.y = 100;
         sprite2.position.z = -150;
         sprite2.scale.set(700,700,700);
+        sprite2.rotation.x = -Math.PI/40;
         scene.add(sprite2);
         
-var plane =  new THREE.Mesh(                                      
-             new THREE.PlaneGeometry(100, 100, 1, 1),
-              new THREE.MeshLambertMaterial({ 
-                color: 0x0000ff             
-                }));    
-        
-        plane.rotation.x = -Math.PI/8;
-        scene.add(plane);    
+   
         
         tick();
 
