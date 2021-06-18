@@ -67,12 +67,12 @@
 
         
         
-        var geometry1 = new THREE.BoxGeometry(400, 100, 100);
+        var geometry1 = new THREE.BoxGeometry(400, 100, 200);
         var isu1 = new THREE.Mesh(geometry1, mat1);
         isu1.position.set( 0, -150, 0);
         scene.add(isu1);
         
-        var geometry2 = new THREE.BoxGeometry(20, 60, 100);
+        var geometry2 = new THREE.BoxGeometry(20, 60, 10);
         var isu2 = new THREE.Mesh(geometry2, mat2);
         isu2.position.set( 150, -200, 50);
         scene.add(isu2);
@@ -117,7 +117,9 @@ var plane =  new THREE.Mesh(
              new THREE.PlaneGeometry(100, 100, 1, 1),
               new THREE.MeshLambertMaterial({ 
                 color: 0x0000ff             
-                }));             
+                }));    
+        
+        plane.rotation.x = -Math.PI/8;
         scene.add(plane);    
         
         tick();
