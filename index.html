@@ -53,6 +53,17 @@
         var bump2 = textureLoader2.load("mokume.jpg");
         mat2.bumpMap = bump2;
         mat2.bumpscale = 0.15;
+        
+         // テクスチャー読み込み
+        var textureLoader3 = new THREE.TextureLoader();  
+        var texture3 = textureLoader2.load("yane.jpg");
+        var mat3 = new THREE.MeshPhongMaterial();
+        mat3.map = texture3;
+  
+        // バンプマップ読み込み
+        var bump3 = textureLoader3.load("yane.jpg");
+        mat3.bumpMap = bump3;
+        mat3.bumpscale = 0.3;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -89,6 +100,13 @@
         isu4.position.set( -150, -200, -50);
         scene.add(isu4);
         
+         // 屋根を作成
+        var geometry3 = new THREE.PlaneGeometry(100,100,100);
+        var yane1 =  new THREE.Mesh(geometry3, mat3);
+        yane1.position(0, 0, 0);
+        yane1.rotation.x = -Math.PI/40;
+        scene.add(yane1);
+        
         // 木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
         var texture3 = textureLoader3.load("tree_01.png");
@@ -100,19 +118,6 @@
         sprite1.position.z = -150;
         sprite1.scale.set(700,700,700);
         scene.add(sprite1);
-        
-         // 屋根をスプライトで作成
-        var textureLoader4 = new THREE.TextureLoader();  
-        var texture4= textureLoader4.load("yane.jpg");
-        const material2 = new THREE.SpriteMaterial({ map: texture4,});
-
-        const sprite2 = new THREE.Sprite(material2);
-        sprite2.position.x = -180;
-        sprite2.position.y = 100;
-        sprite2.position.z = -150;
-        sprite2.scale.set(700,700,700);
-        sprite2.rotation.x = -Math.PI/40;
-        scene.add(sprite2);
         
    
         
