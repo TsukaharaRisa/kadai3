@@ -32,92 +32,92 @@
         // カメラコントローラーを作成
         const controls = new THREE.OrbitControls(camera,document.body);
         
-        // テクスチャー読み込み
+        //椅子のテクスチャー読み込み
         var textureLoader1 = new THREE.TextureLoader();  
         var texture1 = textureLoader1.load("nuno1.jpg");
         var mat1 = new THREE.MeshPhongMaterial();
         mat1.map = texture1;
   
-        // バンプマップ読み込み
-        var bump1 = textureLoader1.load("nuno1.jpg");
+        //椅子のバンプマップ読み込み
+        var bump1 = textureLoader1.load("nuno1_bmp.jpg");
         mat1.bumpMap = bump1;
         mat1.bumpscale = 0.15;
         
-        // テクスチャー読み込み
+        //椅子の足のテクスチャー読み込み
         var textureLoader2 = new THREE.TextureLoader();  
         var texture2 = textureLoader2.load("mokume1.jpg");
         var mat2 = new THREE.MeshPhongMaterial();
         mat2.map = texture2;
   
-        // バンプマップ読み込み
-        var bump2 = textureLoader2.load("mokume1.jpg");
+        //椅子の足のバンプマップ読み込み
+        var bump2 = textureLoader2.load("mokume1_bmp.jpg");
         mat2.bumpMap = bump2;
         mat2.bumpscale = 0.15;
         
-        // テクスチャー読み込み
+        //屋根のテクスチャー読み込み
         var textureLoader3 = new THREE.TextureLoader();  
         var texture3 = textureLoader3.load("yane.jpg");
         var mat3 = new THREE.MeshPhongMaterial();
         mat3.map = texture3;
   
-        // バンプマップ読み込み
-        var bump3 = textureLoader3.load("yane.jpg");
+        //屋根のバンプマップ読み込み
+        var bump3 = textureLoader3.load("yane_bmp.jpg");
         mat3.bumpMap = bump3;
         mat3.bumpscale = 0.5;
         
-        // テクスチャー読み込み
+        //壁のテクスチャー読み込み
         var textureLoader4 = new THREE.TextureLoader();  
         var texture4 = textureLoader4.load("kabe.jpg");
         var mat4 = new THREE.MeshPhongMaterial();
         mat4.map = texture4;
   
-        // バンプマップ読み込み
-        var bump4 = textureLoader4.load("kabe.jpg");
+        //壁のバンプマップ読み込み
+        var bump4 = textureLoader4.load("kabe_bmp.jpg");
         mat4.bumpMap = bump4;
         mat4.bumpscale = 0.2;
   
-        // テクスチャー読み込み
+        //道のテクスチャー読み込み
         var textureLoader5 = new THREE.TextureLoader();  
         var texture5 = textureLoader5.load("isi.jpg");
         var mat5 = new THREE.MeshPhongMaterial();
         mat5.map = texture5;
   
-        // バンプマップ読み込み
-        var bump5 = textureLoader5.load("isi.jpg");
+        //道のバンプマップ読み込み
+        var bump5 = textureLoader5.load("isi_bmp.jpg");
         mat5.bumpMap = bump5;
         mat5.bumpscale = 0.3;
         
-        // テクスチャー読み込み
+        //ドアのテクスチャー読み込み
         var textureLoader6 = new THREE.TextureLoader();  
         var texture6 = textureLoader5.load("syouzi.jpg");
         var mat6 = new THREE.MeshPhongMaterial();
         mat6.map = texture6;
   
-        // バンプマップ読み込み
-        var bump6 = textureLoader6.load("syouzi.jpg");
+        //ドアのバンプマップ読み込み
+        var bump6 = textureLoader6.load("syouzi_bmp.jpg");
         mat6.bumpMap = bump6;
         mat6.bumpscale = 0.2;
         
-        // テクスチャー読み込み
+        //暖簾のテクスチャー読み込み
         var textureLoader7 = new THREE.TextureLoader();  
         var texture7 = textureLoader7.load("nuno2.jpg");
         var mat7 = new THREE.MeshPhongMaterial();
         mat7.map = texture7;
   
-        // バンプマップ読み込み
-        var bump7 = textureLoader7.load("nuno2.jpg");
+        //暖簾のバンプマップ読み込み
+        var bump7 = textureLoader7.load("nuno2_bmp.jpg");
         mat7.bumpMap = bump7;
         mat7.bumpscale = 0.2;
   
         
-        // テクスチャー読み込み
+        //柱のテクスチャー読み込み
         var textureLoader8 = new THREE.TextureLoader();  
         var texture8 = textureLoader8.load("mokume2.jpg");
         var mat8 = new THREE.MeshPhongMaterial();
         mat8.map = texture8;
   
-        // バンプマップ読み込み
-        var bump8 = textureLoader8.load("mokume2.jpg");
+        //柱のバンプマップ読み込み
+        var bump8 = textureLoader8.load("mokume2_bmp.jpg");
         mat8.bumpMap = bump8;
         mat8.bumpscale = 0.2;
   
@@ -139,6 +139,7 @@
         isu1.position.set( -300, -170, -100);
         scene.add(isu1);
         
+        //椅子の足を作成
         var geometry2 = new THREE.BoxGeometry(20, 60, 20);
         var isu2 = new THREE.Mesh(geometry2, mat2);
         isu2.position.set( -150, -220, -50);
@@ -191,7 +192,7 @@
         doa.position.set( 400, -20, -290);
         scene.add(doa);
         
-        //旗を作成
+        //暖簾を作成
         var geometry7 = new THREE.PlaneGeometry(130, 150);
         var hata1 = new THREE.Mesh(geometry7, mat7);
         hata1.position.set( 400, 180, -200);
@@ -215,8 +216,7 @@
         hasira2.position.set( 200, 10, -200);
         scene.add(hasira2);
         
-        
-        // 木0をスプライトで作成
+     　 //木0をスプライトで作成
         var textureLoader3 = new THREE.TextureLoader();  
         var texture3 = textureLoader3.load("tree_01.png");
         const material1 = new THREE.SpriteMaterial({ map: texture3,});
