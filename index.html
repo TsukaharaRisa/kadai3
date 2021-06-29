@@ -103,23 +103,36 @@
         var texture7 = textureLoader7.load("nuno2-1.jpg");
         var mat7 = new THREE.MeshPhongMaterial();
         mat7.map = texture7;
+        
+        var textureLoader8 = new THREE.TextureLoader();  
+        var texture8 = textureLoader8.load("nuno2-2.jpg");
+        var mat8 = new THREE.MeshPhongMaterial();
+        mat8.map = texture8;
+        
+        var textureLoader9 = new THREE.TextureLoader();  
+        var texture9 = textureLoader9.load("nuno2-3.jpg");
+        var mat9 = new THREE.MeshPhongMaterial();
+        mat9.map = texture9;
   
         //暖簾のバンプマップ読み込み
         var bump7 = textureLoader7.load("nuno2_bump.jpg");
         mat7.bumpMap = bump7;
         mat7.bumpscale = 0.1;
-  
+        mat8.bumpMap = bump7;
+        mat8.bumpscale = 0.1;
+        mat9.bumpMap = bump7;
+        mat9.bumpscale = 0.1;
         
         //柱のテクスチャー読み込み
-        var textureLoader8 = new THREE.TextureLoader();  
-        var texture8 = textureLoader8.load("mokume2.jpg");
-        var mat8 = new THREE.MeshPhongMaterial();
-        mat8.map = texture8;
+        var textureLoader10 = new THREE.TextureLoader();  
+        var texture10 = textureLoader10.load("mokume2.jpg");
+        var mat10 = new THREE.MeshPhongMaterial();
+        mat10.map = texture10;
   
         //柱のバンプマップ読み込み
         var bump8 = textureLoader8.load("mokume2_bump.jpg");
-        mat8.bumpMap = bump8;
-        mat8.bumpscale = 0.2;
+        mat10.bumpMap = bump8;
+        mat10.bumpscale = 0.2;
   
         // 平行光源1
         var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -198,21 +211,21 @@
         hata1.position.set( 400, 180, -200);
         scene.add(hata1);
         
-        var hata2 = new THREE.Mesh(geometry7, mat7);
+        var hata2 = new THREE.Mesh(geometry7, mat8);
         hata2.position.set( 540, 180, -200);
         scene.add(hata2);
         
-        var hata3 = new THREE.Mesh(geometry7, mat7);
+        var hata3 = new THREE.Mesh(geometry7, mat9);
         hata3.position.set( 260, 180, -200);
         scene.add(hata3);
         
         //柱を作成
         var geometry8 = new THREE.CylinderGeometry( 5, 5, 520, 32 );
-        var hasira1 = new THREE.Mesh(geometry8, mat8);
+        var hasira1 = new THREE.Mesh(geometry8, mat10);
         hasira1.position.set( 600, 10, -200);
         scene.add(hasira1);
         
-        var hasira2 = new THREE.Mesh(geometry8, mat8);
+        var hasira2 = new THREE.Mesh(geometry8, mat10);
         hasira2.position.set( 200, 10, -200);
         scene.add(hasira2);
         
